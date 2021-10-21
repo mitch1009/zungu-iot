@@ -38,7 +38,7 @@ def github_repository_post_hook():
         pull = git.cmd.Git(auth)
         pull.pull()
     else:
-        Repo.clone_from(auth, f"./repositories/php-boilerplate.git")
+        Repo.clone_from(auth, f"./repositories/php-boilerplate")
     return Response(status=200)
 
 
