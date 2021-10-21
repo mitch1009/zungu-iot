@@ -32,11 +32,12 @@ def github_repository_post_hook():
     """
     pprint(request.json)
     response = request.json;
+    auth = f"https://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:z-auth-basic@github.com/{response['repository']['full_name']}"
     if os.path.exists(f"./repositories/{response['repository']['description']}"):
-        pull = git.cmd.Git(f"{response['repository']['clone_url']}")
+        pull = git.cmd.Git(auth)
         pull.pull()
     else:
-        Repo.clone_from(f"{response['repository']['clone_url']}", f"./repositories/{response['repository']['description']}")
+        Repo.clone_from(auth, f"./repositories/{response['repository']['description']}")
     return Response(status=200)
 
 
