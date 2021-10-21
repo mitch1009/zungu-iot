@@ -1,0 +1,22 @@
+version: 3.8
+services:
+  mariadb:
+    image: mariadb:latest
+    volumes:
+    - './model:/srv/mariadb'
+    container_name: zungu.io
+
+  application:
+    build:
+      context: main
+      dockerfile: Dockerfile
+    volumes:
+    - './app:/srv/app'
+    depends_on:
+      - mariadb
+    environment:
+      - ENV=TEST
+    env_file:
+      - './main/config/.env'
+
+    container_name: app.zungu.io

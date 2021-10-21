@@ -1,0 +1,6 @@
+enum AccountMetods{
+    CREATE LOGIN UPDATE RESET WITHDRAW PAY ADD_USER
+}
+enum RegisterInputEnum {
+    START UPDATE _2FA  PAY FINISH
+}

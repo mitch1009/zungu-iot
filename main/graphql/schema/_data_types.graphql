@@ -1,0 +1,21 @@
+type Result{
+    message: String
+    errors:[String]
+    status:Boolean
+    user_details:UserDetails
+}
+
+type UserDetails implements User{
+    name: String!
+    email: String!
+    package: String!
+    siblings: String
+    payments: [Payments]
+    level: String!
+    phone: String!
+}
+
+type AccountResults{
+    message: String
+    data: String
+}

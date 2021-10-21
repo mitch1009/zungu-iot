@@ -1,0 +1,6 @@
+type Query{
+    user_login(data: LoginData): Result
+    user_verify(data: VerificationData): Result
+    user_details(data: Details): UserDetails
+
+}

@@ -1,0 +1,21 @@
+type Mutation{
+    welcome:Result
+
+    # ::::::::::::::: DATABSE METHODS ::::::::::::
+    # ::                                        ::
+    # ::            Manage Database             ::
+    # ::                                        ::
+    # ::::::::::::::::::::::::::::::::::::::::::::
+
+    """ Create Database Tables """
+    create_tables: Result
+
+    # ::::::::::::::: ACCOUNT METHODS ::::::::::::
+    # ::                                        ::
+    # ::        Manage Accounts                 ::
+    # ::                                        ::
+    # ::::::::::::::::::::::::::::::::::::::::::::
+
+    """ Create Account """
+    account_manager(params: AccountInputs, account_method:AccountMetods): AccountResults
+}

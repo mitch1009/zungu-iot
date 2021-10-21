@@ -1,0 +1,18 @@
+interface  User{
+    name: String!
+    email: String!
+    phone: String!
+    package: String!
+    level: String!
+    siblings: String
+    payments: [Payments]
+}
+
+interface Payments{
+    amount: Int
+    date: String
+    payment_id: String
+    status: Boolean
+
+}
+

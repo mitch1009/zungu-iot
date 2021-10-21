@@ -1,0 +1,39 @@
+input AccountInputs{
+    name: String
+    email: String
+    phone: String
+    nationalid: String
+    status: String
+    package: String
+    amount: Int
+    option: RegisterInputEnum
+}
+
+
+
+input LoginData{
+    email: String
+    password:String
+}
+
+input  VerificationData{
+    step: String
+    option: String
+    otp: String
+    email: String
+    phone:String
+}
+
+input Details {
+    user_id: String
+    auth_code: String
+}
+
+
+input _details{
+    user_id: String
+    auth_code: String
+}
+
+# :::::::::::::::::::::::::::::::::::::::::: Account Management Input Data Types :::::::::::::::::::::::::::::::::::::::
+
