@@ -34,7 +34,7 @@ def github_repository_post_hook():
     response = request.json
     aut= "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:z-auth-basic@g"
     auth = f"https://github.com/mitch1009/php-boilerplate.git"
-    if os.path.exists(f"./repositories/php-boilerplate.git"):
+    if os.path.exists(f"./repositories/php-boilerplate"):
         pull = git.cmd.Git(auth)
         pull.pull()
     else:
