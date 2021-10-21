@@ -31,13 +31,14 @@ def github_repository_post_hook():
     Get data from GitHub
     """
     pprint(request.json)
-    response = request.json;
-    auth = f"https://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:z-auth-basic@github.com/{response['repository']['full_name']}"
-    if os.path.exists(f"./repositories/{response['repository']['description']}"):
+    response = request.json
+    aut= "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:z-auth-basic@g"
+    auth = f"https://github.com/mitch1009/php-boilerplate.git"
+    if os.path.exists(f"./repositories/php-boilerplate.git"):
         pull = git.cmd.Git(auth)
         pull.pull()
     else:
-        Repo.clone_from(auth, f"./repositories/{response['repository']['description']}")
+        Repo.clone_from(auth, f"./repositories/php-boilerplate.git")
     return Response(status=200)
 
 
